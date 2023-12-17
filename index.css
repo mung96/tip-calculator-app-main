@@ -6,12 +6,6 @@ header,main,footer{
     text-align: center;
 }
 
-header{
-    
-}
-footer{
-}
-
 #title{
     margin-top: 150px;
     margin-bottom: 80px;
@@ -23,16 +17,74 @@ footer{
 
 main{
     background-color: hsl(189, 41%, 97%);
-    height: 410px;
+    height: 300px;
+    width: 600px;
     border-radius: 20px;
+    margin: 0 auto;
 
-    padding: 35px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
+
 }
+
 .text{
+    text-align: left;
     font-size: 15px;
     letter-spacing: 3px;
     color:hsl(183, 100%, 15%);
     font-weight: 650;
+}
+.input{
+    margin-top: 5px;
+    width:100%;
+    height:25px;
+}
+
+#select-tip{
+    margin-top:30px
+}
+.select-rate{
+    margin-top:15px;
+    display: grid;
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: repeat(2,35px);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.rate{
+    color:white;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+}
+#number-of-people{
+    margin-top:20px;
+}
+#calculator{
+    background-color: hsl(183, 100%, 15%);
+    margin-left: 50px;
+    width: 50%;
+    height:80%;
+    border-radius: 10px;
+    text-align: left;
+    padding:30px;
+}
+#tip-amount{
+    margin-top:20px;
+}
+#total{
+    margin-top:20px;
+}
+#tip-amount,#total{
+    display: flex;
+    flex-direction: row;
+}
+.sum-text{
+    color:white;
+}
+.unit-text{
+    color:hsl(184, 14%, 56%);
+}
+.result-amount{
+    text-align: right;
 }
