@@ -1,4 +1,38 @@
-*{
-    color:blue; 
-    /* css연결 확인용 */
+body{
+    background-color: hsl(185, 41%, 84%);
+}
+
+header,main,footer{
+    text-align: center;
+}
+
+header{
+    
+}
+footer{
+}
+
+#title{
+    margin-top: 150px;
+    margin-bottom: 80px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    color:hsl(183, 100%, 15%);
+    font-weight:600;
+}
+
+main{
+    background-color: hsl(189, 41%, 97%);
+    height: 410px;
+    border-radius: 20px;
+
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+}
+.text{
+    font-size: 15px;
+    letter-spacing: 3px;
+    color:hsl(183, 100%, 15%);
+    font-weight: 650;
 }
