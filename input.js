@@ -3,7 +3,8 @@
     const INIT_COLOR='rgb( 0, 73, 77)'
 
     const rates = document.querySelectorAll('.rate');
-    
+    const people = document.querySelector('.input-people input');
+
     for(let i=0;i<rates.length;i++){
         let currentRate = rates[i];
         let currentBackColor = 'rgb( 0, 73, 77)';
@@ -15,12 +16,27 @@
             currentRate.style.backgroundColor=currentBackColor;
         })
         rates[i].addEventListener('click',()=>{
+            
             for(let i=0;i<rates.length;i++){
                 rates[i].style.backgroundColor=INIT_COLOR;
             }
             currentRate.style.backgroundColor=SELECTED_COLOR;
             currentBackColor = SELECTED_COLOR;
+
         })
     }
+   
+
+    if(Number(people.value)===0){
+        document.querySelector('.warning').classList.add('warning-visible');
+    }
+    people.addEventListener('input',()=>{
+        if(Number(people.value)===0){
+            document.querySelector('.warning').classList.add('warning-visible');
+        }
+        if(Number(people.value)!==0){
+            document.querySelector('.warning').classList.remove('warning-visible');
+        }})
+        
 
 })();
