@@ -17,6 +17,8 @@
         let tipAmount=0;
         let total=0;
 
+
+        console.log(custom.value);
         for(let i=0;i<rates.length;i++){
             if(window.getComputedStyle(rates[i]).backgroundColor==SELECTED_COLOR){
                 rate = Number(rates[i].textContent.slice(0,-1));

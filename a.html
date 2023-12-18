@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Element</title>
+  <style>
+    input {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="custom">Custom</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the div element
+  var customDiv = document.getElementById('custom');
+
+  // Add click event listener to the div
+  customDiv.addEventListener('click', function(event) {
+    // Create input element
+    var inputElement = document.createElement('input');
+    inputElement.value = customDiv.innerText;
+
+    // Replace div with input
+    customDiv.replaceWith(inputElement);
+
+    // Focus on the input element
+    inputElement.focus();
+
+    // Add blur event listener to the input
+    inputElement.addEventListener('blur', function() {
+      // Replace input with div when the input loses focus
+      inputElement.replaceWith(customDiv);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

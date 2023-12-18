@@ -23,12 +23,26 @@
             }
             currentRate.style.backgroundColor=SELECTED_COLOR;
             currentBackColor = SELECTED_COLOR;
-
         })
     }
 
     custom.addEventListener('click',()=>{
-        custom.replaceWith(document.createElement('input'));
+        for(let i=0;i<rates.length;i++){
+            rates[i].style.backgroundColor=INIT_COLOR;
+        }
+        const inputElement = document.createElement('input');
+        custom.replaceWith(inputElement);
+        inputElement.focus();
+        inputElement.style.borderColor=SELECTED_COLOR;
+        inputElement.style.borderRadius='5px';
+        inputElement.style.outline='none';
+        inputElement.style.fontSize='20px';
+        
+        inputElement.addEventListener('click',()=>{
+            for(let i=0;i<rates.length;i++){
+                rates[i].style.backgroundColor=INIT_COLOR;
+            }
+        })
     })
    
     people.addEventListener('input',()=>{
