@@ -44,6 +44,7 @@ main{
     background-image: url(images/icon-dollar.svg);
     background-repeat: no-repeat;
     background-position: 10px;
+    background-color:lightgray;
 
     text-align: right;
     text-indent: 10px;
@@ -71,6 +72,12 @@ main{
     border-radius: 5px;
     padding-top:10%;
 }
+#custom{
+    color:hsl(183, 100%, 15%);
+    background-color: lightgray;
+    border-radius: 5px;
+    padding-top:10%;
+}
 #number-of-people{
     margin-top:20px;
 }
@@ -78,7 +85,7 @@ main{
     background-image: url(images/icon-person.svg);
     background-repeat: no-repeat;
     background-position: 10px;
-
+    background-color:lightgray;
     text-align: right;
 }
 .warning-input-visible{

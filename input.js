@@ -3,7 +3,9 @@
     const INIT_COLOR='rgb( 0, 73, 77)'
 
     const rates = document.querySelectorAll('.rate');
+    const custom = document.querySelector('#custom');
     const people = document.querySelector('.input-people input');
+    
 
     for(let i=0;i<rates.length;i++){
         let currentRate = rates[i];
@@ -16,7 +18,6 @@
             currentRate.style.backgroundColor=currentBackColor;
         })
         rates[i].addEventListener('click',()=>{
-            
             for(let i=0;i<rates.length;i++){
                 rates[i].style.backgroundColor=INIT_COLOR;
             }
@@ -25,6 +26,10 @@
 
         })
     }
+
+    custom.addEventListener('click',()=>{
+        custom.replaceWith(document.createElement('input'));
+    })
    
     people.addEventListener('input',()=>{
         if(Number(people.value)===0){
