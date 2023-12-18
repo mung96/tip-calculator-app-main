@@ -81,6 +81,10 @@ main{
 
     text-align: right;
 }
+.warning-input-visible{
+    border :2px solid red;
+    outline :none;
+}
 .warning{
     float: right;
     color:red;

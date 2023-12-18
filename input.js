@@ -26,16 +26,14 @@
         })
     }
    
-
-    if(Number(people.value)===0){
-        document.querySelector('.warning').classList.add('warning-visible');
-    }
     people.addEventListener('input',()=>{
         if(Number(people.value)===0){
             document.querySelector('.warning').classList.add('warning-visible');
+            people.classList.add('warning-input-visible');
         }
         if(Number(people.value)!==0){
             document.querySelector('.warning').classList.remove('warning-visible');
+            people.classList.remove('warning-input-visible');
         }})
         
 
