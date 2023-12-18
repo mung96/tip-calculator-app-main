@@ -15,6 +15,9 @@
             currentRate.style.backgroundColor=currentBackColor;
         })
         rates[i].addEventListener('click',()=>{
+            for(let i=0;i<rates.length;i++){
+                rates[i].style.backgroundColor=INIT_COLOR;
+            }
             currentRate.style.backgroundColor=SELECTED_COLOR;
             currentBackColor = SELECTED_COLOR;
         })
